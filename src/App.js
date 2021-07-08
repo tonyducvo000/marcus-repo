@@ -1,5 +1,5 @@
 
-import {BrowserRouter as Router, Route, Switch} from 'reat-router-dom';
+import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 
 import reactDom from 'react-dom';
 
