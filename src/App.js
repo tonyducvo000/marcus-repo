@@ -1,24 +1,13 @@
+import React, {Component} from 'react';
+import './App.css';
 
-import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
+class App extends Component{
+  render(){
+    return(
+      <React.Fragment>
 
-import reactDom from 'react-dom';
-
-function App() {
-  return (
-    <React.Fragment> 
-      <Router>
-        <Switch>
-          <Route exact path="/" component={Home} />
-          <Route exact path="/" component={Home} />
-          <Route exact path="/" component={Home} />
-          <Route  component={404} />
-
-        </Switch>
-
-      </Router>
-
-    </React.Fragment>    
-  );
+      </React.Fragment>
+    )
+  }
 }
-
 export default App;
