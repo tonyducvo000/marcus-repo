@@ -15,9 +15,9 @@ class CallToActionForm extends Component {
     }
 
     schema = {
-        email: Joi.string().required().email().label('Email'),  //input rule: should be string, email form
-        firstName: Joi.string().required().label('First name'),
-        lastName: Joi.string().required().label('Last name'),
+        email: Joi.string().required().email().label('Email'),  //input rule: should be string, is required, email form
+        firstName: Joi.string().required().label('First name'),  //input rule: should be string, is required 
+        lastName: Joi.string().required().label('Last name'),  //input rule: should be string, is required 
     };
 
 
@@ -29,7 +29,7 @@ class CallToActionForm extends Component {
 
         const errors = {};
         for (let item of error.details)
-            errors[item.path[0]] = item.message; // save error message to errors['email]
+            errors[item.path[0]] = item.message; // save error message to errors[name]
         return errors;
 
     }
@@ -67,7 +67,7 @@ class CallToActionForm extends Component {
 
     validateProperty = ({ name, value }) => {
 
-        const obj = { [name]: value };  // save user input into obj and validate it against rules in schema['email']
+        const obj = { [name]: value };  // save user input into obj and validate it against rules in schema[name], where name is captured from event
         const schema = { [name]: this.schema[name] };
         const { error } = Joi.validate(obj, schema);
 
